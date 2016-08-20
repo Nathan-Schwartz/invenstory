@@ -16,7 +16,7 @@ const SearchComponent = ({ passedProps }) => (
         {passedProps.searchResults && passedProps.searchResults.length > 0
         ? <List className='list' selectable>
           <ListSubHeader caption='Results' />
-          {Array.prototype.map.call(passedProps.searchResults, (cur, index) =>
+          {passedProps.searchResults.map((cur, index) =>
             <ListItem
               key={index}
               leftIcon={
