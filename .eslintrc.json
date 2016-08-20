@@ -66,7 +66,14 @@
         "after": true
       }
     ],
+    "camelcase": 1,
+    "max-len": 1,
+    "no-multi-spaces": 1,
+    "no-mixed-operators": 0,
     "jsx-quotes": 0,
+    "space-unary-ops": 0,
+    "import/prefer-default-export":1,
+    "react/jsx-boolean-value": 0,
     "quotes": [
       "error",
       "single",

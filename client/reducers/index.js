@@ -10,7 +10,7 @@ import lastDetailId from './lastDetailId';
 import pieChartData from './pieChart';
 import authenticated from './authentication';
 import lastChanged from './lastChanged';
-import userSettings from './userSettings';
+import userSettings from './usersettings';
 import notifications from './notification';
 import historicalData from './historicalData';
 import dashboard from './dashboard';

@@ -17,7 +17,7 @@ const AddProductComponent = (props) => (
     active={props.active}
     onOverlayClick={props.resetModal}
   >
-    <h3 style={{color: 'black', textAlign: 'center'}}>Add Product</h3>
+    <h3 style={{ color: 'black', textAlign: 'center' }}>Add Product</h3>
     <SearchModule passedProps={props} />
     <Input
       disabled

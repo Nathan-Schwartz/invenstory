@@ -110,7 +110,7 @@ export default class Backlog {
     this.containers[container].association
       .filter(cur => action[cur].pending)
       .forEach(cur => {
-        context.setState({[cur]: action[cur].payload});
+        context.setState({ [cur]: action[cur].payload });
         action[cur].pending = false;
       });
 

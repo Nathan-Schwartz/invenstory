@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Dialog} from 'react-toolbox';
+import { Button, Dialog } from 'react-toolbox';
 
 const DeleteProductComponent = ({
   active,
@@ -15,14 +15,14 @@ const DeleteProductComponent = ({
   >
     <h3 className='styles__centerBlack___2j9F5'>
       You are about to
-      <span style={{color: 'red'}}> DELETE ALL </span>
+      <span style={{ color: 'red' }}> DELETE ALL </span>
       inventory for:
     </h3>
-    <h4 style={{textAlign: 'center'}}> {data.amzn_title} </h4>
+    <h4 style={{ textAlign: 'center' }}> {data.amzn_title} </h4>
     <img
       alt='thumbnail'
       src={data.amzn_thumb_url}
-      style={{ width: 'auto', height: 100, padding: 0, display: 'block', margin: 'auto'}}
+      style={{ width: 'auto', height: 100, padding: 0, display: 'block', margin: 'auto' }}
     />
     <h4 className='styles__centerBlack___2j9F5'>SKU: {data.seller_sku}</h4>
     <h4 className='styles__centerBlack___2j9F5'>Quantity: {data.quantity}</h4>

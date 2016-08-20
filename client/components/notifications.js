@@ -1,7 +1,7 @@
 import React from 'react';
 import { List, ListItem, ListSubHeader, Avatar } from 'react-toolbox';
 
-const NotificationsComponent = ({data, visitItem}) => (
+const NotificationsComponent = ({ data, visitItem }) => (
   <div>
     { // Don't render "Ship Suggestions" if there are none
       data.length > 0
@@ -11,7 +11,7 @@ const NotificationsComponent = ({data, visitItem}) => (
           <ListItem
             key={index}
             leftIcon={
-              <Avatar style={{borderRadius: 0, background: 'white'}}>
+              <Avatar style={{ borderRadius: 0, background: 'white' }}>
                 <img alt='thumbnail' src={cur.amzn_thumb_url} />
               </Avatar>
             }

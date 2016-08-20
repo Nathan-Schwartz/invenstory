@@ -20,7 +20,7 @@ const SearchComponent = ({ passedProps }) => (
             <ListItem
               key={index}
               leftIcon={
-                <Avatar style={{borderRadius: 0, background: 'white'}}>
+                <Avatar style={{ borderRadius: 0, background: 'white' }}>
                   <img alt='thumbnail' src={cur.amzn_thumb_url} />
                 </Avatar>
               }

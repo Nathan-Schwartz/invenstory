@@ -10,15 +10,15 @@ const HomeComponent = ({
 }) => {
   const pieChartOptions = {
     title: 'Current Inventory Value',
-    legend: { position: 'right'},
+    legend: { position: 'right' },
     is3D: false,
     colors: ['#264653', '#2A9D8F', '#E9C46A', '#F4A261', '#E76F51']
   };
 
   const barGraphOptions = {
     title: 'Current Inventory Performance',
-    hAxis: {title: 'SKU'},
-    vAxis: {title: 'Value'},
+    hAxis: { title: 'SKU' },
+    vAxis: { title: 'Value' },
     legend: { position: 'top', maxLines: 3 },
     bar: { groupWidth: '75%' },
     isStacked: false,

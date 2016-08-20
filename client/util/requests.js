@@ -65,7 +65,7 @@ export function getHistoricalData(productId) {
  */
 
 export function logout() {
-  return fetch('/auth/logout', {credentials: 'include'})
+  return fetch('/auth/logout', { credentials: 'include' })
     .then(() => {
       store.dispatch({ type: UPDATE_AUTHENTICATION, data: false });
       redirect('/#/login')();
@@ -91,8 +91,8 @@ export function checkAuth() {
     return;
   }
 
-  return fetch('/user/me', {credentials: 'include'})
-    .then(({status}) => {
+  return fetch('/user/me', { credentials: 'include' })
+    .then(({ status }) => {
       if (status > 400 && status < 500) {
         redirect('/#/login')();
       } else {
@@ -158,7 +158,7 @@ export function updateUserInfo(params) {
  */
 
 export function processNewInventory() {
-  return fetch('/products/list', {credentials: 'include'})
+  return fetch('/products/list', { credentials: 'include' })
     .then(response => {
       if (response.status > 400 && response.status < 500) {
         redirect('/#/login')();
@@ -190,7 +190,7 @@ export function deleteInventoryItem(params) {
       body: JSON.stringify(params)
     }
   )
-  .then(({status}) => {
+  .then(({ status }) => {
     if (status > 400 && status < 500) {
       redirect('/#/login')();
     }
@@ -217,7 +217,7 @@ export function shipInventoryItems(params) {
       body: JSON.stringify(params)
     }
   )
-  .then(({status}) => {
+  .then(({ status }) => {
     if (status > 400 && status < 500) {
       redirect('/#/login')();
     }
@@ -250,7 +250,7 @@ export function addUserInventory(params) {
       body: JSON.stringify(params)
     }
   )
-  .then(({status}) => {
+  .then(({ status }) => {
     if (status > 400 && status < 500) {
       redirect('/#/login')();
     }

@@ -1,7 +1,8 @@
 import React from 'react';
+import { Button } from 'react-toolbox';
+
 import { store } from '../store/initStore';
 import * as actions from '../actionTypes';
-import { Button } from 'react-toolbox';
 
 /**
  * @function redirect
@@ -74,7 +75,7 @@ export function processNotifications(inventory) {
  * @return {Object[]} Formatted into data useful to Google Charts bar graph
  */
 export function processGeneralGraphData(inventory) {
-  const lineData = [['SKU', 'Cost', {type: 'string', role: 'tooltip'}, 'Current Value', {type: 'string', role: 'tooltip'}]];
+  const lineData = [['SKU', 'Cost', { type: 'string', role: 'tooltip' }, 'Current Value', { type: 'string', role: 'tooltip' }]];
   
   inventory.forEach(cur => {
     const amznPrice = cur.amzn_price_fba || cur.amzn_price_fbm;
@@ -100,7 +101,7 @@ export function processGeneralGraphData(inventory) {
  * @return {Object[]} Formatted into data useful to Google Charts line graph
  */
 export function processPieChartData(inventory) {
-  const lineData = [['SKU', 'Cost', {type: 'string', role: 'tooltip'}]];
+  const lineData = [['SKU', 'Cost', { type: 'string', role: 'tooltip' }]];
   
   inventory.forEach(cur => {
     const amznPrice = cur.amzn_price_fba || cur.amzn_price_fbm;

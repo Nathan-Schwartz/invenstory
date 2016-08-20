@@ -13,7 +13,7 @@ const DetailComponent = ({
 }) => (
   <div className='styles__detailDisplay___2K0QU'>
     <img alt='thumbnail' className='styles__detailImage___3CFNO' src={data.amzn_thumb_url} />
-    <h3 className='styles__detailTitle___2N12_' style={{display: 'inline', margin: '10px'}}> {data.amzn_title} </h3>
+    <h3 className='styles__detailTitle___2N12_' style={{ display: 'inline', margin: '10px' }}> {data.amzn_title} </h3>
     <Button className='styles__detailCancel___dK0rK' icon='clear' floating mini onMouseUp={hideDetails} />
     <div className='styles__detailDescription___2v665'> {data.amzn_description && data.amzn_description.slice(0, 240)} </div>
     <div> Sales Rank: {data.amzn_sales_rank} </div>

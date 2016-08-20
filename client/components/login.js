@@ -11,7 +11,8 @@ const LoginComponent = () => (
         <img
           alt='lego_logo'
           className='styles__logoImgTitle___tQotd'
-          src='./assets/lego_logo.png' />
+          src='./assets/lego_logo.png'
+        />
         InvenStory
       </div>
       <div className='styles__loginBox___3xm-6'>
@@ -48,7 +49,7 @@ const LoginComponent = () => (
               alt='products_charts'
               className='img-responsive center-block styles__boxShadow___g0vg-'
               src='./assets/products_charts.png'
-              />
+            />
           </div>
         </div>
       </div>
@@ -86,7 +87,8 @@ const LoginComponent = () => (
             <img
               alt='add_products'
               className='img-responsive center-block styles__boxShadow___g0vg-'
-              src='./assets/add_products.png' />
+              src='./assets/add_products.png'
+            />
           </div>
         </div>
         <div className="col-md-4">
