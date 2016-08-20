@@ -29,7 +29,10 @@ module.exports = {
     loaders: [
       {
         test: /(\.jsx|\.js)$/,
-        loaders: ['react-hot', 'babel?presets[]=react,presets[]=es2015,presets=stage-0'],
+        loader: 'babel',
+        query: {
+          presets: ['react','es2015','stage-0']
+        },
         exclude: /node_modules/
       },
       {
