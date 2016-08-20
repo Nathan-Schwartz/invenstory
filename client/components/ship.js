@@ -9,20 +9,20 @@ const ShipComponent = (props) => (
   >
     <div className=''>
       <h3 className='styles__centerBlack___2j9F5'>
-        Select <span style={{color: 'red'}}>SHIP QUANTITY</span>
+        Select <span style={{ color: 'red' }}>SHIP QUANTITY</span>
       </h3>
-      <h4 style={{textAlign: 'center'}}>{props.data.amzn_title}</h4>
+      <h4 style={{ textAlign: 'center' }}>{props.data.amzn_title}</h4>
       <img
         alt='thumbnail'
         src={props.data.amzn_thumb_url}
-        style={{width: 'auto', height: 100, padding: 0, display: 'block', margin: 'auto'}}
+        style={{ width: 'auto', height: 100, padding: 0, display: 'block', margin: 'auto' }}
       />
 
       <h4 className='styles__centerBlack___2j9F5'>SKU: {props.data.seller_sku}</h4>
       <h4 className='styles__centerBlack___2j9F5'>Current Unit Value: ${props.data.amzn_price_fba || props.data.amzn_price_fbm}</h4>
       <h4 className='styles__centerBlack___2j9F5'>Current Quantity: {props.data.quantity}</h4>
       <h4 className='styles__centerBlack___2j9F5'>
-        Gain: <span style={{color: 'green'}}>{props.data.profit}%</span>
+        Gain: <span style={{ color: 'green' }}>{props.data.profit}%</span>
       </h4>
       <div className='contianer'>
         <div className='row'>

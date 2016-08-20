@@ -29,7 +29,7 @@ const mapDispatch = (dispatch) => {
       dispatch({ type: USER_SETTINGS_UPDATE_EMAIL, data: response[0].amzn_email });
       dispatch({ type: USER_SETTINGS_UPDATE_ZIPCODE, data: Number(response[0].amzn_zip) });
 
-      if (!! response[0].emailnotify) {
+      if (response[0].emailnotify) {
         dispatch({ type: USER_SETTINGS_UPDATE_MAIL, data: true });
       }
     });

@@ -88,25 +88,25 @@ class DashboardContainer extends React.Component {
 
     return (
       <div>
-        <div style={{display: 'inline'}}>
-          <h3 style={{display: 'inline', color: '#264653', fontWeight: 900}}>
+        <div style={{ display: 'inline' }}>
+          <h3 style={{ display: 'inline', color: '#264653', fontWeight: 900 }}>
             Total Inventory Value:
-            <span style={{color: 'green'}}>
+            <span style={{ color: 'green' }}>
               ${(calculateTotals(this.props.tableData).totalValue).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')}
             </span>
           </h3>
           <Button
             className='styles__inlineButton___16AEc'
-            style={{display: 'inline', float: 'right'}}
+            style={{ display: 'inline', float: 'right' }}
             label='Add Product'
             onMouseUp={this.props.handleModal}
             raised floating
           />
         </div>
-        <h5 style={{color: '#264653', marginTop: '5px', marginBottom: '5px'}}>
+        <h5 style={{ color: '#264653', marginTop: '5px', marginBottom: '5px' }}>
           Original Cost: ${(calculateTotals(this.props.tableData).totalCost).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')}
         </h5>
-        <h5 style={{color: '#264653', marginTop: '5px', marginBottom: '5px'}}>
+        <h5 style={{ color: '#264653', marginTop: '5px', marginBottom: '5px' }}>
           Current ROI:
           {
             calculateTotals(this.props.tableData).totalValue

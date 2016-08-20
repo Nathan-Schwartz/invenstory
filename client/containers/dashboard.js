@@ -68,7 +68,7 @@ const mapDispatch = (dispatch) => {
       dispatch({ type: DASHBOARD_RESET_MODAL });
     },
     smartAdd: (data) => {
-      dispatch({ type: FORM_SMART_ADD, data});
+      dispatch({ type: FORM_SMART_ADD, data });
     },
     setModalSize: () => {
       // Detect mobile screen and set modal size
@@ -79,13 +79,13 @@ const mapDispatch = (dispatch) => {
       }
     },
     handleQuantityChange: (val) => {
-      dispatch({ type: UPDATE_SHIP_QUANTITY, data: val});
+      dispatch({ type: UPDATE_SHIP_QUANTITY, data: val });
     },
     resetShipQuantity: () => {
       dispatch({ type: RESET_SHIP_QUANTITY });
     },
     handleAmazonResultSelection: (ASIN) => {
-      dispatch({ type: AMAZON_RESULTS_SELECTION, data: ASIN});
+      dispatch({ type: AMAZON_RESULTS_SELECTION, data: ASIN });
     },
     handleSearchToggle: () => {
       dispatch({ type: TOGGLE_SHOW_SEARCH_OPTION });
@@ -138,7 +138,7 @@ const mapDispatch = (dispatch) => {
               [new Date(cur.amzn_fetch_date), cur.amzn_price_fba || cur.amzn_price_fbm]
             )
           ];
-          dispatch({ type: UPDATE_HISTORICAL_DATA, data: historicalData});
+          dispatch({ type: UPDATE_HISTORICAL_DATA, data: historicalData });
         })
         .catch(err => {
           console.log('error in catch from api.getHistoricalData in the DashboardContainer', err);
@@ -163,39 +163,39 @@ const mapDispatch = (dispatch) => {
 
       // Need to refactor
       if (asin.length < 10) {
-        dispatch({ type: UPDATE_FORM_ERR_ASIN, data: 'Must be 10 characters'});
+        dispatch({ type: UPDATE_FORM_ERR_ASIN, data: 'Must be 10 characters' });
         inputErr++;
       } else {
-        dispatch({ type: UPDATE_FORM_ERR_ASIN, data: ''});
+        dispatch({ type: UPDATE_FORM_ERR_ASIN, data: '' });
       }
 
       if (!seller_sku || seller_sku.length < 4) {
-        dispatch({ type: UPDATE_FORM_ERR_SELLER_SKU, data: 'Must be between 4-30 characters'});
+        dispatch({ type: UPDATE_FORM_ERR_SELLER_SKU, data: 'Must be between 4-30 characters' });
         inputErr++;
       } else {
-        dispatch({ type: UPDATE_FORM_ERR_SELLER_SKU, data: ''});
+        dispatch({ type: UPDATE_FORM_ERR_SELLER_SKU, data: '' });
       }
 
       if (!purchase_price || purchase_price < 0) {
-        dispatch({ type: UPDATE_FORM_ERR_PURCHASE_PRICE, data: 'Please enter valid purchase price'});
+        dispatch({ type: UPDATE_FORM_ERR_PURCHASE_PRICE, data: 'Please enter valid purchase price' });
         inputErr++;
       } else {
-        dispatch({ type: UPDATE_FORM_ERR_PURCHASE_PRICE, data: ''});
+        dispatch({ type: UPDATE_FORM_ERR_PURCHASE_PRICE, data: '' });
       }
 
       if (!quantity || quantity < 1) {
-        dispatch({ type: UPDATE_FORM_ERR_QUANTITY, data: 'Please enter valid quantity'});
+        dispatch({ type: UPDATE_FORM_ERR_QUANTITY, data: 'Please enter valid quantity' });
         inputErr++;
       } else {
-        dispatch({ type: UPDATE_FORM_ERR_QUANTITY, data: ''});
+        dispatch({ type: UPDATE_FORM_ERR_QUANTITY, data: '' });
       }
 
       // need to add purchase date check <= current date
       if (!purchase_date) {
-        dispatch({ type: UPDATE_FORM_ERR_PURCHASE_DATE, data: 'Please enter purchase date'});
+        dispatch({ type: UPDATE_FORM_ERR_PURCHASE_DATE, data: 'Please enter purchase date' });
         inputErr++;
       } else {
-        dispatch({ type: UPDATE_FORM_ERR_PURCHASE_DATE, data: ''});
+        dispatch({ type: UPDATE_FORM_ERR_PURCHASE_DATE, data: '' });
       }
 
       if (!inputErr) {
